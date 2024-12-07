@@ -16,6 +16,6 @@ app.use("/uid", rfidRoutes);
 app.use("/reservation", reservationRoutes);
 
 app.use(globalErrorHandler);
-app.listen(3000, "192.168.1.27", () => {
+app.listen(3000, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
