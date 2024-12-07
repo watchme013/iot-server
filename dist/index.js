@@ -16,6 +16,6 @@ app_1.default.use(apiKey_1.default);
 app_1.default.use("/uid", radioFrequency_1.default);
 app_1.default.use("/reservation", reservation_1.default);
 app_1.default.use(globalError_1.default);
-app_1.default.listen(3000, "192.168.1.27", () => {
+app_1.default.listen(3000, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

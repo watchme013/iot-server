@@ -13,7 +13,7 @@ const globalErrorHandler = (err, req, res, next) => {
             .send((0, responseBuilder_1.sendErrorResponse)({ message: "The UID already exist", code: err.code }));
     }
     else {
-        res.status(400).send((0, responseBuilder_1.sendErrorResponse)());
+        res.status(400).send((0, responseBuilder_1.sendErrorResponse)({ message: err.message }));
     }
 };
 exports.default = globalErrorHandler;
