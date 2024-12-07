@@ -10,7 +10,7 @@ const globalErrorHandler = (err, req, res, next) => {
     else if (err instanceof library_1.PrismaClientKnownRequestError) {
         res
             .status(409)
-            .send((0, responseBuilder_1.sendErrorResponse)({ message: "The UID already exist", code: err.code }));
+            .send((0, responseBuilder_1.sendErrorResponse)({ message: err.message, code: err.code }));
     }
     else {
         res.status(400).send((0, responseBuilder_1.sendErrorResponse)({ message: err.message }));

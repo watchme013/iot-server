@@ -16,7 +16,7 @@ const globalErrorHandler = (
     res
       .status(409)
       .send(
-        sendErrorResponse({ message: "The UID already exist", code: err.code })
+        sendErrorResponse({ message: err.message, code: err.code })
       );
   } else {
     res.status(400).send(sendErrorResponse({message: err.message}));
