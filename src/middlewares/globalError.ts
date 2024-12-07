@@ -19,6 +19,7 @@ const globalErrorHandler = (
         sendErrorResponse({ message: "The UID already exist", code: err.code })
       );
   } else {
+    console.log("This err:", err.message);
     res.status(400).send(sendErrorResponse());
   }
 };
